@@ -1,0 +1,1 @@
+const sidebar=document.querySelector(".sidebar"),iconToggleSidebar=document.querySelector(".toggle-sidebar"),mainContent=document.querySelector(".content-area");iconToggleSidebar.addEventListener("click",()=>{sidebar.classList.toggle("active"),mainContent.classList.toggle("active")});

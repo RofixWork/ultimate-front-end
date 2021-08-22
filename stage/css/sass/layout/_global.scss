@@ -5,16 +5,24 @@
 }
 body {
   overflow-x: hidden;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .page {
   min-height: 100vh;
+  width: 100%;
 
   .content-area {
     width: calc(100% - 250px);
     min-height: 100%;
-    transition: 0.3s;
+    transition: width 0.3s ease-in-out;
     will-change: width;
     float: right;
+
+    &.active {
+      width: 100%;
+      transition: width 0.3s ease-in-out;
+    }
   }
 }

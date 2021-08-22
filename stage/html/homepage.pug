@@ -11,4 +11,7 @@ html(lang="en")
         .page.home__page
             include layout/sidebar
             .content-area
-                h1 #{pageTitle}
+                include layout/header
+                .content
+                    h1 #{pageTitle}
+        include layout/scripts
