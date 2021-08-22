@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>HomePage</title><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body> 
     <div class="page home__page">
-      <div class="sidebar">Sidebar</div>
+      <aside class="sidebar">
+        <div class="sidebar__logo">
+          <h3>Sidebar</h3>
+        </div>
+        <div class="sidebar__menuLinks"> 
+          <h3><a href="#">HomePage</a></h3>
+        </div>
+        <div class="sidebar__menuLinks"> 
+          <h3 class="headLink" data-menu="form"><a href="#">Forms</a><i class="fa fa-chevron-right icon-toggle"></i></h3>
+          <nav class="form"><a href="#">Input</a><a href="#">Radio</a><a href="#">Checkbox</a><a href="#">Textarea</a></nav>
+        </div>
+        <div class="sidebar__menuLinks"> 
+          <h3 class="headLink" data-menu="misc"><a href="#">Misc</a><i class="fa fa-chevron-right icon-toggle"></i></h3>
+          <nav class="misc"><a href="#">Loading</a><a href="#">Breadcrump</a></nav>
+        </div>
+      </aside>
       <div class="content-area">
         <header><i class="fa fa-exchange fa-lg toggle-sidebar"></i></header>
         <div class="content">
@@ -18,7 +32,6 @@
         </div>
       </div>
     </div>
-    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

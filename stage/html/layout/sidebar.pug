@@ -1,1 +1,24 @@
-.sidebar Sidebar
+aside.sidebar
+    .sidebar__logo
+        h3 Sidebar
+    .sidebar__menuLinks 
+        h3: a(href='#') HomePage
+    .sidebar__menuLinks 
+        h3(class='headLink', data-menu='form')
+            a(href='#') Forms
+            i.fa.fa-chevron-right.icon-toggle
+        nav.form
+            a(href="#") Input
+            a(href="#") Radio
+            a(href="#") Checkbox
+            a(href="#") Textarea
+
+    .sidebar__menuLinks 
+        h3(class='headLink', data-menu='misc')
+            a(href='#') Misc
+            i.fa.fa-chevron-right.icon-toggle
+        nav.misc
+            a(href="#") Loading
+            a(href="#") Breadcrump
+    
+

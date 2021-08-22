@@ -14,5 +14,129 @@
       left: -250px;
       transition: left 0.3s ease-in-out;
     }
+
+    &__logo {
+      width: 100%;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      margin-bottom: 15px;
+
+      & h3 {
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+
+    &__menuLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 14px 17px;
+      h3 {
+        position: relative;
+        padding-left: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        & .icon-toggle {
+          font-size: 14px;
+          transition: transform 0.2s linear;
+
+          &.rotatechevron {
+            transform: rotate(90deg);
+            transition: transform 0.2s linear;
+          }
+        }
+
+        &:hover > a {
+          margin-left: 7px;
+          transition: 0.3s ease-in-out;
+        }
+
+        & > a {
+          transition: 0.3s ease-in-out;
+          color: white;
+          font-size: 18px;
+          display: block;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 7px;
+            height: 7px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            transition: background-color 0.3s ease-in-out;
+          }
+        }
+
+        &:hover > a {
+          margin-left: 7px;
+          transition: 0.3s ease-in-out;
+        }
+
+        &:hover > a::before {
+          background-color: white;
+          transition: background-color 0.3s ease-in-out;
+        }
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 16px;
+        position: relative;
+        height: 0;
+        display: none;
+        transition: height 0.3s ease-in-out;
+        &.active {
+          height: auto;
+          display: block;
+          visibility: visible;
+          opacity: 1;
+          transition: height 0.3s ease-in-out;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 3px;
+          height: 100%;
+          background: #666;
+        }
+        a {
+          color: white;
+          font-size: 15px;
+          text-transform: capitalize;
+          font-weight: 500;
+          display: block;
+          position: relative;
+          padding: 10px 0;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0%;
+            left: -16px;
+            width: 3px;
+            height: 100%;
+            background: white;
+            transition: 0.4s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+          }
+          &:hover::before {
+            opacity: 1;
+            visibility: visible;
+            transition: 0.4s ease-in-out;
+          }
+        }
+      }
+    }
   }
 }
