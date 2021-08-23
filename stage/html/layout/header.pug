@@ -1,3 +1,27 @@
 header
     .container-fluid
-        i.fa.fa-exchange.fa-lg.toggle-sidebar
+        i.fa.fa-exchange.fa-lg.toggle-sidebar.d-block
+
+        .dropdown.notifications-container
+            i.fa.fa-bell.fa-lg#notifications.notifications-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+            ul.dropdown-menu(aria-labelledby='notifications')
+                .notify-head Notifications
+                    span 50
+                .notify-content 
+                    .notify-content-item
+                        i.fa.fa-envelope-o.fa-lg.fa-fw
+                        span you got email bla bla bla
+                    .notify-content-item
+                        i.fa.fa-money.fa-lg.fa-fw
+                        span you got money bla bla bla
+                    .notify-content-item
+                        i.fa.fa-envelope-o.fa-lg.fa-fw
+                        span you got email bla bla bla
+                    .notify-content-item
+                        i.fa.fa-thumbs-o-up.fa-lg.fa-fw
+                        span you got like bla bla bla
+                    .notify-content-item
+                        i.fa.fa-credit-card-alt.fa-lg.fa-fw
+                        span you got credit card bla bla bla
+                .notify-footer
+                    a(href='#') view all notifications

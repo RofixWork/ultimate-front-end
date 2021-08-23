@@ -1,7 +1,95 @@
 header {
   background-color: white;
-  padding: 10px 0;
+  padding: 14px 0;
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
   .toggle-sidebar {
     cursor: pointer;
+    font-size: 18px;
+  }
+  .notifications-container {
+    .notifications-toggle {
+      padding: 8px;
+      background-color: #eee;
+      color: #444;
+      border-radius: 50%;
+      font-size: 16px;
+      display: block;
+    }
+    .dropdown-menu {
+      min-width: 600px;
+      margin-top: 10px !important;
+      border: 0;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      &::before {
+        content: "";
+        border-style: solid;
+        border-color: transparent transparent #555 transparent;
+        border-width: 8px;
+        position: absolute;
+        top: -16px;
+        left: 9px;
+      }
+      &.show {
+        padding: 0 !important;
+      }
+
+      // notify-head
+      .notify-head {
+        padding: 10px;
+        background-color: #444;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+
+        & > span {
+          display: block;
+          font-size: 12px;
+          width: 22px;
+          height: 22px;
+          background: #fff;
+          color: #444;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 23px;
+          font-weight: 600;
+        }
+      }
+      // .notify-content
+      .notify-content {
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        color: #444;
+        &-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          & > i {
+            font-size: 16px;
+          }
+          & > span {
+            display: block;
+            font-size: 14px;
+            text-transform: capitalize;
+          }
+        }
+      }
+      // .notify-footer
+      .notify-footer {
+        padding: 10px;
+        display: grid;
+        place-items: center;
+        border-top: 1px solid #eee;
+        a {
+          display: block;
+          text-transform: capitalize;
+        }
+      }
+    }
   }
 }

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap" rel="stylesheet">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&amp;display=swap">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body> 
@@ -27,7 +29,21 @@
       </aside>
       <div class="content-area">
         <header>
-          <div class="container-fluid"><i class="fa fa-exchange fa-lg toggle-sidebar"></i></div>
+          <div class="container-fluid"><i class="fa fa-exchange fa-lg toggle-sidebar d-block"></i>
+            <div class="dropdown notifications-container"><i class="fa fa-bell fa-lg notifications-toggle" id="notifications" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+              <ul class="dropdown-menu" aria-labelledby="notifications">
+                <div class="notify-head">Notifications<span>50</span></div>
+                <div class="notify-content"> 
+                  <div class="notify-content-item"><i class="fa fa-envelope-o fa-lg fa-fw"></i><span>you got email bla bla bla</span></div>
+                  <div class="notify-content-item"><i class="fa fa-money fa-lg fa-fw"></i><span>you got money bla bla bla</span></div>
+                  <div class="notify-content-item"><i class="fa fa-envelope-o fa-lg fa-fw"></i><span>you got email bla bla bla</span></div>
+                  <div class="notify-content-item"><i class="fa fa-thumbs-o-up fa-lg fa-fw"></i><span>you got like bla bla bla</span></div>
+                  <div class="notify-content-item"><i class="fa fa-credit-card-alt fa-lg fa-fw"></i><span>you got credit card bla bla bla</span></div>
+                </div>
+                <div class="notify-footer"><a href="#">view all notifications</a></div>
+              </ul>
+            </div>
+          </div>
         </header>
         <div class="container-fluid"> 
           <div class="content">
@@ -37,6 +53,7 @@
         </div>
       </div>
     </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
