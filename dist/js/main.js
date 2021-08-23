@@ -24,3 +24,46 @@ headMenuLink.forEach((headLink) => {
     menuLink.classList.toggle("active");
   });
 });
+
+// fullScreen
+
+const toggleFullScreen = document.querySelector(".icon__fullscreen");
+
+toggleFullScreen.addEventListener("click", (e) => {
+  e.target.classList.toggle("full-screen");
+
+  if (e.target.classList.contains("full-screen")) {
+    openFullscreen();
+  } else {
+    closeFullscreen();
+  }
+});
+
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    /* IE11 */
+    document.msExitFullscreen();
+  }
+}

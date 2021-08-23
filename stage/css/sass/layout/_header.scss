@@ -1,6 +1,15 @@
 header {
   background-color: white;
   padding: 14px 0;
+  .header__icon {
+    padding: 8px;
+    background-color: #eee;
+    color: #444;
+    border-radius: 50%;
+    font-size: 16px;
+    display: block;
+    cursor: pointer;
+  }
   .container-fluid {
     display: flex;
     align-items: center;
@@ -11,14 +20,6 @@ header {
     font-size: 18px;
   }
   .notifications-container {
-    .notifications-toggle {
-      padding: 8px;
-      background-color: #eee;
-      color: #444;
-      border-radius: 50%;
-      font-size: 16px;
-      display: block;
-    }
     .dropdown-menu {
       min-width: 600px;
       margin-top: 10px !important;
