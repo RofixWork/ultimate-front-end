@@ -67,3 +67,32 @@ function closeFullscreen() {
     document.msExitFullscreen();
   }
 }
+
+// settings box
+const settingsBox = document.querySelector(".settings__box");
+const iconOpenSettingsBox = document.querySelector(".icon__settings__box");
+
+iconOpenSettingsBox.addEventListener("click", () => {
+  iconOpenSettingsBox.firstElementChild.classList.toggle("fa-spin");
+  settingsBox.classList.toggle("open_settings__box");
+});
+
+// chhange colors
+
+const listsColors = Array.from(
+  document.querySelectorAll(".color__option ul > li")
+);
+
+const allColors = Array.from([]);
+
+listsColors.forEach((listColor) => {
+  allColors.push(listColor.dataset.theme);
+
+  listColor.addEventListener("click", () => {
+    const colorTheme = listColor.dataset.theme;
+    allColors.forEach((color) => {
+      document.body.classList.remove(color);
+    });
+    document.body.classList.add(colorTheme);
+  });
+});

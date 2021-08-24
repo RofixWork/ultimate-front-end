@@ -1,0 +1,61 @@
+.settings__box {
+  position: fixed;
+  right: -240px;
+  top: 0;
+  background-color: white;
+  padding: 10px;
+  width: 250px;
+  height: 100%;
+  z-index: 9999;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+
+  &.open_settings__box {
+    right: 0;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .icon__settings__box {
+    position: absolute;
+    top: 56px;
+    left: -37px;
+    display: block;
+    background: white;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+    color: #444;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #111;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+  &__content {
+    .color__option {
+      ul {
+        padding: 0;
+        display: flex;
+        user-select: none;
+        gap: 14px;
+        $themes: #3498db, #2ecc71, #e74c3c;
+        @for $i from 1 through length($themes) {
+          li:nth-child(#{$i}) {
+            background-color: nth($list: $themes, $n: $i);
+          }
+        }
+        li {
+          width: 1.3889rem;
+          height: 1.3889rem;
+          cursor: pointer;
+          border-radius: 50%;
+          opacity: 0.8;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

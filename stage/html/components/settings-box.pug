@@ -1,0 +1,16 @@
+.settings__box
+    .icon__settings__box 
+        i.fa.fa-gear.fa-lg.toggle__settings__box
+
+    .settings__box__content
+        .setting__option.color__option
+            h6 Color Option
+            ul
+                -var themes = ['blue-theme', 'green-theme', 'red-theme']
+                each theme in themes
+                    li(data-theme=theme)
+
+        .setting__option
+            h6 Font Option
+        .setting__option
+            h6 Sidebar Option
